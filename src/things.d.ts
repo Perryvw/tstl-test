@@ -3,5 +3,5 @@ interface Thing {
     bar: number;
 }
 
-declare const rooms: Thing[];
-export default rooms;
+declare const things: Thing[];
+export default things;
