@@ -1,3 +1,6 @@
-import things from "./things"
+import ModUpgraded from "./ModUpgraded";
+import * as saveDataManager from "./saveDataManager";
 
-print(things.length);
+const modUpgraded = new ModUpgraded();
+
+saveDataManager.testMap();
