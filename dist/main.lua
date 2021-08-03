@@ -1006,7 +1006,7 @@ Map = (function()
 end)()
 
 -- DEBUG
-print("MAP = " .. tostring(Map))
+print("MAP WAS INSTANTIATED: " .. tostring(Map))
 
 __TS__MathAtan2 = math.atan2 or math.atan
 
@@ -1286,14 +1286,10 @@ function __TS__OptionalFunctionCall(f, ...)
 end
 
 function __TS__OptionalMethodCall(____table, methodName, ...)
-    local args = {...}
     if ____table then
         local method = ____table[methodName]
         if method then
-            return method(
-                ____table,
-                __TS__Unpack(args)
-            )
+            return method(____table, ...)
         end
     end
     return nil
